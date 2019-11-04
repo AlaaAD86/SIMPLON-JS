@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+        <link href="menu.css" rel="stylesheet" />
+    </head>
+    <body>
+    
+
+
+<div class="dropdown">
+
+
+    <button class="button" onclick="show()">ALPHA</button>
+    <div  id="drop-content1" style="display:none"  >
+        <a href="#">item1</a>
+        <a href="#">item2</a>
+        <a href="#">item3</a>
+
+    </div>
+</div>
+
+<div class="dropdown">
+
+    <button class="button" onclick="show2()">BETA</button>
+    <div  id="drop-content2" style="display:none"  >
+        <a href="#">item1</a>
+        <a href="#">item2</a>
+        <a href="#">item3</a>
+
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="button" onclick="show3()">GAMMA</button>
+    <div  id="drop-content3" style="display:none"  >
+        <a href="#">item1</a>
+        <a href="#">item2</a>
+        <a href="#">item3</a>
+
+    </div>
+
+
+
+
+
+        <script>
+     
+        function show(){
+            var click = document.getElementById("drop-content1");
+            if(click.style.display === "none"){
+                click.style.display = "block";
+            } else {
+                click.style.display = "none";
+            }
+        }
+
+        function show2(){
+            var click = document.getElementById("drop-content2");
+            if(click.style.display === "none"){
+                click.style.display = "block";
+            } else {
+                click.style.display = "none";
+            }
+        }
+
+        function show3(){
+            var click = document.getElementById("drop-content3");
+            if(click.style.display === "none"){
+                click.style.display = "block";
+            } else {
+                click.style.display = "none";
+            }
+        }
+        
+        </script>
+    </body>
+</html>

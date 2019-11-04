@@ -1,0 +1,31 @@
+{
+    "articles": [
+
+        {
+            "titre": "LOREM 1",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum molestias nam accusantium vel dolor vero nisi rem. At, tempore et. In quam quos debitis recusandae temporibus amet enim rem quidem?",
+            "lien": "loremipsum.com"
+        }, {
+            "titre": "LOREM 2",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum molestias nam accusantium vel dolor vero nisi rem. At, tempore et. In quam quos debitis recusandae temporibus amet enim rem quidem?",
+            "lien": "loremipsum.com"
+        }, {
+            "titre": "LOREM 3",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum molestias nam accusantium vel dolor vero nisi rem. At, tempore et. In quam quos debitis recusandae temporibus amet enim rem quidem?",
+            "lien": "loremipsum.com"
+        }, {
+            "titre": "LOREM 4",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum molestias nam accusantium vel dolor vero nisi rem. At, tempore et. In quam quos debitis recusandae temporibus amet enim rem quidem?",
+            "lien": "loremipsum.com"
+        }, {
+            "titre": "LOREM 5",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum molestias nam accusantium vel dolor vero nisi rem. At, tempore et. In quam quos debitis recusandae temporibus amet enim rem quidem?",
+            "lien": "loremipsum.com"
+        }, {
+            "titre": "LOREM 6",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum molestias nam accusantium vel dolor vero nisi rem. At, tempore et. In quam quos debitis recusandae temporibus amet enim rem quidem?",
+            "lien": "loremipsum.com"
+        }
+
+    ]
+}

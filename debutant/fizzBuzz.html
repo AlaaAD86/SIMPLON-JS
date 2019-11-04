@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fizzBuzz</title>
+</head>
+
+<body>
+
+    <p>
+        Ecrivez un programme qui affiche tous les nombres entre 1 et 100 avec les exceptions suivantes :
+        <br>
+        Il affiche "Fizz" à la place du nombre si celui-ci est divisible par 3
+        <br>
+        Il affiche "Buzz" à la place du nombre si celui-ci est divisible par 5 et non par 3
+        <br>
+        Il affiche "FizzBuzz" à la place du nombre si celui-ci est divisible à la fois par 3 et par 5
+        <br>
+        Vous pouvez utiliser l'opérateur modulo % qui renvoie le reste de la division d'un entier par un autre.
+
+
+    </p>
+
+
+
+
+
+    <script>
+
+
+for (let i = 0; i<=100; i++ ){
+    
+
+    let x = i;
+
+    if(( x % 3 === 0  ) && (x % 5 ===0)){
+        console.log('fizzBuzz');
+    } else if (x % 3 === 0) {
+        console.log('fizz');
+    }else if (x % 5 === 0) {
+        console.log('buzz');
+    }else{
+        console.log(x);
+        
+    }
+  
+    
+}
+
+
+    </script>
+</body>
+
+</html>

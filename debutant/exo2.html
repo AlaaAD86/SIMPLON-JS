@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>
+        Sauriez-vous automatiser l'affichage de la table de multiplication ?
+
+
+        <br>
+        Demandez un chiffre à l'utilisateur, et si le chiffre est correct, afficher la table dans la page Html.
+
+
+        <br>
+        Si l'utilisateur renseigne un nombre incorrect, proposez lui de le resaisir.
+
+    </p>
+
+
+
+
+
+
+
+
+    <script>
+
+        let color;
+        document.write("<table border='1px'>");
+
+        for (let i = 1; i < 30; i++) {
+
+            document.write("<tr style='height:50px; text-align: center; color: red'>");
+
+            for (let j = 1; j < 30; j++) {
+
+                if (j == 1 || i == 1) {
+                    color = "#bbb";
+                }
+                else {
+                    color = "#fff";
+                }
+
+                document.write("<td style='width:50px;background-color:" + color + "'>" + i * j + "</td>");
+            }
+            document.write("</tr>");
+        }
+
+        document.write("</table>");
+
+
+      
+        // let numOne = Number(prompt("first number"));
+        // let numTwo = Number(prompt("second"));
+
+        // let total = numOne * numTwo;
+
+        // console.log(total);
+
+        
+
+    </script>
+</body>
+
+</html>
