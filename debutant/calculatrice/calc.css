@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: coral;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+main {
+    margin: auto;
+    width: 25%;
+    background-color: #688500;
+    height: 75%;
+    border: black solid 5px;
+    border-radius: 8%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+section:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid rgb(70, 37, 0) 5px;
+    margin-bottom: 5%;
+    height: 20%;
+    width: 80%;
+}
+
+section:nth-child(1) article {
+    border: solid rgb(70, 37, 0) 5px;
+    height: 80%;
+    width: 95%;
+}
+
+
+section:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid rgb(70, 37, 0) 5px;
+    height: 65%;
+    width: 80%;
+}
+
+section:nth-child(2) article {
+    height: 98%;
+    width: 98%;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+}
+
+form::after{
+    content: "";
+	width: 282px;
+	height: 330px;
+	background-color: rgba(0,0,0,.18);
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -40%);
+	bottom: 10px;
+    border-radius: 100%;
+    
+}
+
+
+input {
+    width: 100%;
+    height: 100%;
+    background: #9e8e00;
+    color:white;
+    font-size: 40px;
+    padding: 10px;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 5px;
+    
+}
+
+table{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+}
+
+table tbody {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+table tbody tr{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+  
+}
+
+table tbody tr td {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-a;
+    align-items: center;
+    padding: 0.45em;
+    width: 100%;
+    z-index: 2;
+}
+
+.button {
+    background: #007e9e;
+	border: 0.1em solid #2f1606;
+	color: #fff;
+	cursor: pointer;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 1.7rem;
+    height: 2em;
+	padding: 0;
+	top: 0;
+	transition: all 0.1s ease;
+    width: 2em;
+    cursor: pointer;
+    
+}
+
+.ac, .ce, .egal{
+    background: #9e3200;
+}
+
+.ac:focus, .ce:focus, .egal:focus{
+    background: #642000;
+}
+
+.pourcentage, .addSub{
+    background: #9e8e00;
+}
+
+.pourcentage:focus, .addSub:focus{
+    background: #9e8e00;
+}
+
+.sub, .add, .division, .multi {
+    background: #4a00ac;
+}
+
+
+
+

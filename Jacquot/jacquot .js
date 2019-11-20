@@ -1,5 +1,5 @@
-btn = document.getElementById("btn");
-btn.addEventListener("click", function() {
+// btn = document.getElementById("btn");
+// btn.addEventListener("click", function() {
 
 
 
@@ -54,4 +54,3 @@ btn.addEventListener("click", function() {
     xhttp.open("GET", "articles.json", true);
     xhttp.send();
 
-});

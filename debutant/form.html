@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FORM</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(43, 0, 68);
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        label {
+            color: burlywood;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        form {
+            width: 50%;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-bottom: 18px;
+        }
+
+        input[type=submit] {
+            background-color: rgb(77, 0, 66);
+            border: none;
+            color: darkgray;
+            font-size: 20px;
+            transition: .3s;
+        }
+
+        input[type=submit]:hover {
+            background-color: rgb(95, 0, 79);
+        }
+
+        #obligatoire {
+            display: none;
+            color: rgb(172, 172, 172);
+            position: relative;
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+
+
+        h3 {
+            padding: 10px;
+            background-color: rgb(82, 3, 71);
+            color: ghostwhite;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 5%;
+            text-align: center;
+        }
+
+        p {
+            color: ghostwhite;
+            font-size: 12px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 5px;
+        }
+
+        /* ajouter couleur verte et "x" quand saisie est correcte */
+        .valid {
+            color: green;
+        }
+
+        .valid:before {
+            position: relative;
+            left: -35px;
+            content: "✔";
+        }
+
+        /* ajouter couleur rouge et "x" quand saisie pas correcte */
+        .invalid {
+            color: red;
+        }
+
+        .invalid:before {
+            position: relative;
+            left: -15px;
+            content: "✖";
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <section>
+
+        <form>
+
+            <label for="UserName">ENTRER VOTRE NOM</label><br>
+            <input type="text" id="usr" name="username" placeholder="nom d'utilisateur" required><br>
+
+            <label for="password">ENTRER VOTRE MOT DE PASSE</label><br>
+            <input type="password" id="mdp" name="motDePasse" placeholder="mot de passe"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+
+            <input id="btn" type="submit" value="Submit">
+
+
+        </form>
+
+        <article id="obligatoire">
+            <h3>Obligatoire</h3>
+            <p id="minmax" class="invalid">minuscules et MAJUSCULES</p>
+            <p id="num" class="invalid">1235467890</p>
+            <p id="long" class="invalid">8 caracteres minimum</p>
+        </article>
+
+    </section>
+
+
+
+
+
+
+
+
+    <script>
+
+        let usrname = document.getElementById('usr');
+        let mdp = document.getElementById('mdp');
+        let btn = document.getElementById('btn');
+        let minmax = document.getElementById('minmax');
+        let num = document.getElementById('num');
+        let long = document.getElementById('long');
+
+
+        // When the user clicks on the password field, show the message box
+        mdp.onfocus = function () {
+            document.getElementById("obligatoire").style.display = "block";
+        }
+
+        // When the user clicks outside of the password field, hide the message box
+        mdp.onblur = function () {
+            document.getElementById("obligatoire").style.display = "none";
+        }
+
+        mdp.onkeyup = function () {
+
+            // minmax validation
+            let mini = /[a-z]/g;
+            let maxi = /[A-Z]/g;
+            if ((mdp.value.match(mini)) && (mdp.value.match(maxi))) {
+                minmax.classList.remove("invalid");
+                minmax.classList.add("valid");
+            } else {
+                minmax.classList.remove("valid");
+                minmax.classList.add("invalid");
+            }
+
+
+            // num validation
+            let chiffre = /[0-9]/g;
+            if ((mdp.value.match(chiffre))) {
+                num.classList.remove("invalid");
+                num.classList.add("valid");
+            } else {
+                num.classList.remove("valid");
+                num.classList.add("invalid");
+            }
+
+            // longueur validation
+            if (mdp.value.length >= 8) {
+                long.classList.remove("invalid");
+                long.classList.add("valid");
+            } else {
+                long.classList.remove("valid");
+                long.classList.add("invalid");
+            }
+
+
+        }
+
+        let essaies = 3;
+
+        if (usrname.value === "alaaAD" && mdp.value === "HelloWorld123") {
+            window.location = "/fizzBuzz.html";
+        }  
+
+        if (essaies === 0) {
+            
+            usrname.disabled = true;
+            mdp.disabled = true;
+            btn.disabled = true;
+            
+            
+        }
+        essaies--;
+        console.log(essaies);
+        
+      
+    </script>
+</body>
+
+</html>
