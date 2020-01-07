@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promises</title>
+</head>
+<body>
+    
+
+<script>
+    //USING MAP - FOREACH - FILTER
+    
+    let products = [
+        {name: "appel", description:"aze qd wc", price: 5},
+        {name: "banana", description:"aze qd wc", price: 1},
+        {name: "citron", description:"aze qd wc", price: 4},
+        {name: "tea", description:"aze qd wc", price: 5},
+        {name: "rice", description:"aze qd wc", price: 7},
+        {name: "socks", description:"aze qd wc", price: 1},
+    ]
+
+    let sum = 0;
+    products.filter((product) => product.price > 1)
+            .map((product) => product.price)
+            .forEach(price => sum += price);
+
+    console.log(sum);
+    
+// ================
+
+    // USING map 
+
+    const songs = [
+        {id: 1, name: "Girly Curly hair", artist: "Cameleon"},
+        {id: 2, name: "Bingo Bingo Singo", artist: "Jargon"},
+        {id: 3, name: "Fastosh fastosh", artist: "Fastoshia Land"},
+        {id: 4, name: "Come here baby", artist: "Baby Boom"}
+    ];
+
+    
+    const allSongsTitles = songs.map(song => {
+        return song.name;
+    });
+    console.log(allSongsTitles);
+    
+    const mySongs = song => {
+        return song.name.toLowerCase();
+    };
+    const lowerCase = songs.map(mySongs);
+    console.log(lowerCase);
+
+    //////////////////////////////////////////////////////
+    
+    // USING filter
+    const myArray = [1,2,3,4,5,6,7,8,9];
+    let myEvenArray = myArray.filter(nums => {
+        return nums % 2 === 0
+    });
+    console.log(myEvenArray);
+
+    const myString = ['Cat', 'Dog', 'Camel', 'deer', 'pickachu'];
+    let searchChar = myString.filter(str => {
+        return str.includes('a');
+    });
+    console.log(searchChar);
+
+
+
+    // USING reduce
+
+    const numbers = [2, 11, 25, 8, 9, 10];
+    const sumReduce = numbers.reduce((accumulate, currentValue)=> {
+        return accumulate + currentValue;
+    }, 0); // 0 is the index of array
+    
+    console.log(sum);
+        
+
+    
+
+    
+// ---------------SORT function------------------
+    let a = [1, 25, 88, 5, 47, 33]
+    function value(a, b){
+        return a-b;
+    }
+
+    a.sort(value);
+    console.log(a);
+
+    a.sort(value).reverse();
+    console.log(a);
+
+
+    let people = [
+        {name: 'a', age: 25},
+        {name: 'b', age: 29},
+        {name: 'c', age: 23},
+        {name: 'd', age: 27},
+        {name: 'e', age: 22},
+        {name: 'f', age: 20},
+
+    ]
+
+    people.sort(function(a, b){
+        return a.age - b.age
+    })
+
+    console.log(people);
+    
+    </script>
+
+
+
+    <script src="promesses.js"></script>
+</body>
+</html>

@@ -17,7 +17,7 @@ window.addEventListener('keyup', function (e) {
 
 
 let img = new Image();
-img.src = "pomme.png";
+
 
 img.onload = function (box) {
     ctx.drawImage(img,x,y);
@@ -31,7 +31,7 @@ function Box(options) {
     this.height = options.height || 50;
     this.color = options.color || 'pomme.png'
     this.speed = options.speed || 5;
-    this.direction = options.direction || 'right';
+    this.direction = options.direction || 'left';
 }
 
 

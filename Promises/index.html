@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promises</title>
+</head>
+<body>
+    
+
+<script>
+    //USING MAP - FOREACH - FILTER
+    
+    let products = [
+        {name: "appel", description:"aze qd wc", price: 5},
+        {name: "banana", description:"aze qd wc", price: 1},
+        {name: "citron", description:"aze qd wc", price: 4},
+        {name: "tea", description:"aze qd wc", price: 5},
+        {name: "rice", description:"aze qd wc", price: 7},
+        {name: "socks", description:"aze qd wc", price: 1},
+    ]
+
+    let sum = 0;
+    products.filter((product) => product.price > 1)
+            .map((product) => product.price)
+            .forEach(price => sum += price);
+
+    console.log(sum);
+    
+// ================
+    //////////////////////////////////////////////////////
+
+    // USING map 
+
+    const songs = [
+        {id: 1, name: "Girly Curly hair", artist: "Cameleon"},
+        {id: 2, name: "Bingo Bingo Singo", artist: "Jargon"},
+        {id: 3, name: "Fastosh fastosh", artist: "Fastoshia Land"},
+        {id: 4, name: "Come here baby", artist: "Baby Boom"}
+    ];
+
+    
+    const allSongsTitles = songs.map(song => {
+        return song.name;
+    });
+    console.log(allSongsTitles);
+    
+    const mySongs = song => {
+        return song.name.toLowerCase();
+    };
+    const lowerCase = songs.map(mySongs);
+    console.log(lowerCase);
+
+    //////////////////////////////////////////////////////
+    
+    // USING filter
+    const myArray = [1,2,3,4,5,6,7,8,9];
+    let myEvenArray = myArray.filter(nums => {
+        return nums % 2 === 0
+    });
+    console.log(myEvenArray);
+
+    const myString = ['Cat', 'Dog', 'Camel', 'deer', 'pickachu'];
+    let searchChar = myString.filter(str => {
+        return str.includes('a');
+    });
+    console.log(searchChar);
+
+    //////////////////////////////////////////////////////
+
+    // USING reduce
+
+    const numbers = [2, 1, 2, 5, 2, 0];
+    const sumReduce = numbers.reduce((accumulate, currentValue)=> {
+        return accumulate + currentValue;
+    },1); 
+    
+    console.log(sumReduce);
+        
+
+    const mult = [songs, [{id: 5, name: 'Choppy Chippa', artist: 'SOAD'}]];
+    const flatMult = mult.reduce((accumulate, currentValue) => {
+        return accumulate.concat(currentValue);
+    }, []);
+    console.log(flatMult);
+    
+    //////////////////////////////////////////////////////
+
+
+    // USING ALL THREE MAP - FILTER - REDUCE
+
+    const spotify = [
+        {id: 1, name: 'Choppy Chippa', artist: 'SOAD', duration: 208},
+        {id: 2, name: 'Hakuna Matata', artist: 'BRSD', duration: 186},
+        {id: 3, name: 'Floppy Hoppey', artist: 'LSDE', duration: 308},
+        {id: 4, name: 'Stars by Stars', artist: 'PEEM', duration: 550},
+        {id: 5, name: 'Chasse d eau', artist: 'POUM', duration: 697}
+    ]
+    
+    const radioFM = [
+        {id: 1, name: 'Tomato', artist: 'Toma titio', duration: 192},
+        {id: 2, name: 'Potato chips', artist: 'Pringles', duration: 215},
+        {id: 3, name: 'Cyber Punk', artist: 'Flush', duration: 333},
+        {id: 4, name: 'Clustrophobia', artist: 'Prisoned', duration: 666},
+        {id: 5, name: 'Suger Daddy', artist: 'Leclerc', duration: 111}
+    ]
+    const allSongs = [spotify, radioFM];
+
+    const songNames = allSongs
+        .reduce((acc, currValue) => {
+            return acc.concat(currValue);
+        },[])
+        
+        .map(song => {
+            return { ...song, duration: Math.floor(song.duration / 60) };
+        })
+
+        .filter(song =>{
+            return song.duration > 3; 
+        })
+
+        .map(song => song.name)
+        .join(" , ");
+
+        console.log(songNames);
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ---------------SORT function------------------
+    let a = [1, 25, 88, 5, 47, 33]
+    function value(a, b){
+        return a-b;
+    }
+
+    a.sort(value);
+    console.log(a);
+
+    a.sort(value).reverse();
+    console.log(a);
+
+
+    let people = [
+        {name: 'a', age: 25},
+        {name: 'b', age: 29},
+        {name: 'c', age: 23},
+        {name: 'd', age: 27},
+        {name: 'e', age: 22},
+        {name: 'f', age: 20},
+
+    ]
+
+    people.sort(function(a, b){
+        return a.age - b.age
+    })
+
+    console.log(people);
+    
+    </script>
+
+
+
+    <script src="promesses.js"></script>
+</body>
+</html>

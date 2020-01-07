@@ -4,8 +4,13 @@
 
 
     let xhttp = new XMLHttpRequest();
+    
+    xhttp.open("GET", "articles.json", true);
+
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
+            console.log('connected 200');
+            
             let response = JSON.parse(xhttp.responseText);
             let articles = response.articles;
 
@@ -51,6 +56,5 @@
     };
 
 
-    xhttp.open("GET", "articles.json", true);
     xhttp.send();
 
